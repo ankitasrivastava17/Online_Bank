@@ -1,0 +1,43 @@
+mysql> SELECT * FROM CUSTOMER;
++--------------+----------+----------+--------+------+--------+
+| accNo        | username | password | mobile | CID  | amount |
++--------------+----------+----------+--------+------+--------+
+| BBBBBB222222 | C2       | ROOT2    | 222222 |    2 |    200 |
+| CCCCCC333333 | C3       | ROOT3    |  33333 |    3 |   2800 |
+| DDDDDD444444 | C4       | ROOT4    |  44444 |    4 |    500 |
++--------------+----------+----------+--------+------+--------+
+3 rows in set (0.01 sec)
+
+mysql> select * from accountant;
++-----+----------+----------+
+| AID | username | password |
++-----+----------+----------+
+|   1 | A1       | ROOT1    |
+|   2 | A2       | ROOT2    |
+|   3 | A3       | ROOT3    |
+|   4 | A4       | ROOT4    |
++-----+----------+----------+
+4 rows in set (0.01 sec)
+
+mysql> desc accountant;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| AID      | int         | NO   | PRI | NULL    |       |
+| username | varchar(12) | YES  |     | NULL    |       |
+| password | varchar(12) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+3 rows in set (0.06 sec)
+
+mysql> desc customer;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| accNo    | varchar(12) | NO   | PRI | NULL    |       |
+| username | varchar(20) | NO   | UNI | NULL    |       |
+| password | varchar(10) | YES  |     | NULL    |       |
+| mobile   | int         | YES  |     | NULL    |       |
+| CID      | int         | YES  |     | NULL    |       |
+| amount   | int         | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
